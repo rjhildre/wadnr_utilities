@@ -4,11 +4,18 @@ setup_logging() - Setups up logging protocall and applies arcgis specific
 error messagesto the logger.
 timer() - Decorator to time how long a function takes to run.
 """
-try:
-    import arcpy
 
-    def setup_arcpy_environment():
-        ''' Process: Define some misc. arcpy environment variables'''
+
+import os
+import logging
+import logging.config
+from functools import wraps
+
+
+def setup_arcpy_environment():
+    ''' Process: Define some misc. arcpy environment variables'''
+    try:
+        import arcpy
         arcpy.env.overwriteOutput = True
         arcpy.SetLogHistory(False)
         arcpy.env.pyramid = "NONE"
@@ -16,14 +23,9 @@ try:
         arcpy.env.XYResolution = "0.0005 METERS"
         arcpy.env.XYTolerance = "0.001 METERS"
         arcpy.env.outputCoordinateSystem = 2927  # WASPSNAD83HARNFEET
-except ImportError:
-    print("The module arcpy does not seem to be available."
-          "Are you working in a virtual environment?")
-
-import os
-import logging
-import logging.config
-from functools import wraps
+    except ImportError:
+        print("The module arcpy does not seem to be available."
+              "Are you working in a virtual environment?")
 
 
 def setup_logging(root: str) -> object:
