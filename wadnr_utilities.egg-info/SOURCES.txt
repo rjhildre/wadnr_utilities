@@ -1,0 +1,8 @@
+README.md
+setup.py
+wadnr_utilities/__init__.py
+wadnr_utilities/wadnr_utilities.py
+wadnr_utilities.egg-info/PKG-INFO
+wadnr_utilities.egg-info/SOURCES.txt
+wadnr_utilities.egg-info/dependency_links.txt
+wadnr_utilities.egg-info/top_level.txt

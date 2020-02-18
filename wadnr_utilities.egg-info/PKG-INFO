@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: wadnr-utilities
+Version: 1.0.0
+Summary: Common functions used at Washington DNR
+Home-page: https://github.com/rjhildre/wadnr_utilities
+Author: Jason Hildreth
+Author-email: rjhildre@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6

@@ -1,1 +1,1 @@
-from . import wadnr_utilities
+import wadnr_utilities
